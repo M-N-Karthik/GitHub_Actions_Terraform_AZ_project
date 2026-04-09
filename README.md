@@ -125,4 +125,3 @@ This will render:
 After pasting → commit → refresh GitHub page.
 
 
-![Terraform](https://github.com/M-N-Karthik/GitHub_Actions_Terraform_AZ_project/actions/workflows/terraform-azure.yaml/badge.svg)
