@@ -1,0 +1,29 @@
+name: "Terraform Azure"
+description: "Reusable Terraform deployment for Azure"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v3
+
+    - name: Terraform Init
+      shell: bash
+      run: |
+        terraform init \
+          -backend-config="resource_group_name=${{ env.TF_RG }}" \
+          -backend-config="storage_account_name=${{ env.TF_STORAGE }}" \
+          -backend-config="container_name=tfstate" \
+          -backend-config="key=dev.terraform.tfstate"
+
+    - name: Terraform Validate
+      shell: bash
+      run: terraform validate
+
+    - name: Terraform Plan
+      shell: bash
+      run: terraform plan -out=tfplan
+
+    - name: Terraform Apply
+      shell: bash
+      run: terraform apply -auto-approve tfplan
