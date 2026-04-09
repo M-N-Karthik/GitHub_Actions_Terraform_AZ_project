@@ -121,3 +121,7 @@ This will render:
 - Professional GitHub README  
 
 After pasting → commit → refresh GitHub page.
+
+# Azure 3-Tier Architecture with Terraform & GitHub Actions
+
+![Terraform](https://github.com/M-N-Karthik/GitHub_Actions_Terraform_AZ_project/actions/workflows/terraform-azure.yaml/badge.svg)
