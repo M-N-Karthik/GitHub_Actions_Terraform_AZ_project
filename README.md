@@ -67,6 +67,8 @@ flowchart TD
 ├── autoscale.tf
 ├── provider.tf
 ├── backend.tf
+├── variables.tf
+├── outputs.tf
 ├── user-data.sh
 └── README.md
 ```
