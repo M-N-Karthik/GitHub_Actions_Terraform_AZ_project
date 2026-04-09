@@ -25,7 +25,7 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Run Terraform Action
-        uses: ./.github/actions/terraform/
+        uses: ./.github/actions/terraform
         env:
           TF_RG: ${{ secrets.TF_RG }}
           TF_STORAGE: ${{ secrets.TF_STORAGE }}
