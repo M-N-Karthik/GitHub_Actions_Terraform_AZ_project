@@ -9,6 +9,9 @@ runs:
 
     - name: Terraform Init
       shell: bash
+      env:
+        TF_RG: ${{ env.TF_RG }}
+        TF_STORAGE: ${{ env.TF_STORAGE }}
       run: |
         terraform init \
           -backend-config="resource_group_name=${{ env.TF_RG }}" \
